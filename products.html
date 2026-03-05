@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Products | Fusion Pharmaceuticals</title>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+
         /* ===== GLOBAL STYLES ===== */
         :root {
             --primary: #1a6fb0;
@@ -520,6 +522,36 @@
             width: 100%;
         }
 
+
+
+
+
+
+.product-img.icon-bg{
+  height: 180px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background: linear-gradient(135deg, #e6f2ff, #f7fbff);
+  border-radius: 12px 12px 0 0;
+  position: relative;
+  overflow: hidden;
+}
+.product-img.icon-bg i{
+  font-size: 64px;
+  color: #1e88e5;
+  opacity: 0.95;
+}
+.product-img.icon-bg .product-category{
+  position:absolute;
+  top: 12px;
+  right: 12px;
+}
+
+
+
+
+
         /* ===== RESPONSIVE STYLES ===== */
         @media (max-width: 992px) {
             .products-hero h1 {
@@ -628,589 +660,754 @@
             </ul>
         </div>
     </header>
+<!-- Products Hero -->
+<section class="products-hero">
+    <div class="container">
+        <h1>Our Pharmaceutical Products</h1>
+        <p>High-quality medicines across multiple therapeutic categories, sourced from trusted international manufacturers.</p>
+    </div>
+</section>
 
-    <!-- Products Hero -->
-    <section class="products-hero">
-        <div class="container">
-            <h1>Our Pharmaceutical Products</h1>
-            <p>High-quality medicines across multiple therapeutic categories, sourced from trusted international manufacturers.</p>
+
+
+<!-- Categories Section -->
+<section class="categories-section">
+    <div class="container">
+        <div class="section-title">
+            <h2>Product Categories</h2>
+            <p>Browse our comprehensive range of pharmaceutical products by therapeutic category.</p>
         </div>
-    </section>
-
-    <!-- Categories Section -->
-    <section class="categories-section">
-        <div class="container">
-            <div class="section-title">
-                <h2>Product Categories</h2>
-                <p>Browse our comprehensive range of pharmaceutical products by therapeutic category.</p>
+        
+        <div class="categories-grid">
+            <div class="category-card active" data-category="all">
+                <i class="fas fa-boxes category-icon"></i>
+                <h3>All Products</h3>
+                <p>Complete range of medicines</p>
             </div>
             
-            <div class="categories-grid">
-                <div class="category-card active" data-category="all">
-                    <i class="fas fa-boxes category-icon"></i>
-                    <h3>All Products</h3>
-                    <p>Complete range of medicines</p>
-                </div>
-                
-                <div class="category-card" data-category="vaccines">
-                    <i class="fas fa-syringe category-icon"></i>
-                    <h3>Vaccines</h3>
-                    <p>Immunization products</p>
-                </div>
-                
-                <div class="category-card" data-category="antibiotics">
-                    <i class="fas fa-bacteria category-icon"></i>
-                    <h3>Antibiotics</h3>
-                    <p>Anti-infective agents</p>
-                </div>
-                
-                <div class="category-card" data-category="cardiology">
-                    <i class="fas fa-heartbeat category-icon"></i>
-                    <h3>Cardiology</h3>
-                    <p>Heart & vascular medicines</p>
-                </div>
-                
-                <div class="category-card" data-category="diabetology">
-                    <i class="fas fa-heart category-icon"></i>
-                    <h3>Diabetology</h3>
-                    <p>Diabetes management</p>
-                </div>
-                
-                <div class="category-card" data-category="pediatrics">
-                    <i class="fas fa-baby category-icon"></i>
-                    <h3>Pediatrics</h3>
-                    <p>Children's medicines</p>
-                </div>
+            <div class="category-card" data-category="vaccines">
+                <i class="fas fa-syringe category-icon"></i>
+                <h3>Vaccines</h3>
+                <p>Immunization products</p>
             </div>
-        </div>
-    </section>
-
-    <!-- Products Section -->
-    <section class="products-section">
-        <div class="container">
-            <div class="products-grid" id="productsContainer">
-                <!-- Vaccines Products -->
-                <div class="product-card" data-category="vaccines">
-                    <div class="product-img">
-                        <img src="https://media.istockphoto.com/id/1304499871/photo/medical-disposable-syringe-for-vaccine-injection-and-glass-vial.jpg?s=612x612&w=0&k=20&c=Hyrdv7Iz9dq_RdOiE7htszWa93bkCSpaiOS04lqG2eQ=" alt="COVID-19 Vaccine">
-                        <div class="product-category">Vaccines</div>
-                    </div>
-                    <div class="product-content">
-                        <h3>COVID-19 Vaccine</h3>
-                        <p class="product-description">mRNA-based vaccine for prevention of COVID-19 infection, approved for emergency use.</p>
-                        
-                        <div class="product-specs">
-                            <span class="spec">mRNA Technology</span>
-                            <span class="spec">2-dose regimen</span>
-                            <span class="spec">Cold Chain Required</span>
-                        </div>
-                        
-                        <a href="contact.html" class="btn">Request Information</a>
-                    </div>
-                </div>
-                
-                <div class="product-card" data-category="vaccines">
-                    <div class="product-img">
-                        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAMgA7gMBIgACEQEDEQH/xAAbAAADAAMBAQAAAAAAAAAAAAAAAQIDBAUGB//EAEAQAAEEAQMBBAcECAMJAAAAAAEAAgMRBAUSITEGE0FRFCIyYXGBkVKhscEVIyQzQmJy0QcWUyU0Q3OCosLh8P/EABkBAQEBAQEBAAAAAAAAAAAAAAABAwIEBf/EACQRAQEAAQMEAgIDAAAAAAAAAAABAgMRIRITMUEEUSIyYWKR/9oADAMBAAIRAxEAPwDrpUqRS+y+emkUmhBKFVIpBKKVUilBNIpVSEE0ilSFFQQilaVIJ2o2qqQgnailaVII2qaWRIhBjIUlZEiEGNBCqklURtSIV0kQgxkKSFlISpUYqSIWWlG1WDqUhWlSgghKlkpTSCaRSqkUgmkUqpCBUkqARSippFKkUgmkqV0UKCEKqRSCUJoQJKlVJIFtSLVaEGIsSLVlUkIMVJELIWpIjHSkhZCEiqIrhRSy0pIVR06QqIRSjpFJUrSQSAilSKQQQilaVIEAilSFBKAE0IEik0Uip2qSFkpKkEUhXSRCImkqVgIKDGhUkglCaEEpEKkUiMdJELJtS2oMVKSFlLSltV3HTSpUhR0iuVJWSlJCqJpFKqRSCSEqV0kglBVIpQQhXSKQQokljj9t4B8llpcWaJ51R53uLCeWE8LPVzuE3kaYY9V2bWXq2HiRh873BpNCmE8qMPXNPy3Fsc4ZXjL6oXrdN7NaXm4veSRzxu8mzX+IXk+10MGkPLcHGc7+aaW/uAH4rxZfK1N+I3mhiyHUsYyOYx++vGMhwVDNxyeX7f6hS8KNT1XJftbJFCL/AIGX+JWPUoZ3xNE2VM+zyCaH0CmPzNT6W/Gn2+jpFEf7ph82j8EyF9J40UkVdJEWghCvaikGNMKiEqpAqRSoIPVBjKVKypQdBCaFFSkVSqNwY8OLGvA/hd0KoxoW5eFL7UcmO7zYd7foefvQMF0n+7TRT+5rqd9Cueue16fppqaWaWKSJxbKxzD5OFLGut3JAIrlNCBUlSpJAeC0pY2xTmeU0zqXeAW7ytTVu8/R8xgALw2wCuNTGXHl3hbK9PpGtaY3G2nPguvF4Xme2DsbNv0fKhdZ/wBQLhQtzpWbptCL3+UZHTz9y0cnDyXmv0IWHyMzR+S+dtL6ezq2aQw+6kJM8A+El/gtzH0mTVP3czRG005/ksR0bOYy2YLQ49AZxX3BdnsqZoYZcbMZHFM1wIazxC70tPG5bZRnqalk4ruMbsY1o52gBNMpL6LyBJNCAUqkkCUlVSRRCR1KKKECpJNCDfRSpJR0khFKkqQShVSKQZo83IjbsEhcz7DxuH0KffYsn77HMZ+1C78itegkQp0ReqttuDHOf2XKY7gktkBY4fl96QxGbBvm2PI5Dm8fVai22ywzDbI3unVw5p4HyXGUzninDBNG2M0Jo3fA0sLuAtprmhpbNGHgfDldPT9P02bGAklfG8k9TxS5y1bjOUxnVXCvr7lgf37pZIjTY7FcdePP5lehyuzsrWOkgkbK13Ao9Fp5mHKYnNi7lrx/HLfHyC570yaTTqMDSM2eIzYssY5r2qP3LXzIMiKYsyZGukHjd/eucYNSglJkbORwf2edzQR588rNDOwNqbHzHO83PBP4LrHO27rcYyOjft4cz5BaeVA8xOp9GuHV0K6OMMiZoAw3gHj2fzpZn6VlP9Wmbb53OBVuePipML6aGK50mNE+QeuWgu+Kyq5YTjvMRIJb1pQtp4Z3ylFJpIgSTSQJCCeUKoEii0WoJQhCo6RSTSK5dEhNJECSaEElJUU2sLjQCtsghJbkGH3h9ZwC3o8aFnAYDSwy18Z4aTTtccRyHgNK24pZI42i6I8COF18nu4mbS0NcQKAHW/Fc3M7uEU5tn71x3O56ddHS1MvLyIsNzopDG9jgR3fFiwuhkafqXo7Hxt9IbIA80L689Ov0WKBmXNDUOMCwjjvRTV6/EBGNE11WGAGunRYamXTeGunN3im6flOJ348sR8u6csH+WcmWXd3sg/qZS91BmY+RHJJFIHNje9jj0otJDuvkQVrYWpYWqRPl07KjyGMIDnRm6sBw+oIPwIXM+Rl6dXTleYOkZeMWtbK1+7qZS/a35A/iVj7QSejaYcfBzP2hzgHSMaW7W+NL0We5kcbnSOaxo6lxoBeG1zVdPbM+H02AyhzWmNsgLgXdLA6Wu5lcvNNpPDHDnunmkb3ElDkPrir6X5rOJ2dCdp9/CNEjD8WanNDhIaDvHgLj/7TZmRxvb6R6Q53MZa4QbSasCnctrqDRtbzUuPDC4Su1YIschC1MwjFdHtY4NeaLw9rQ03QHJ6/2SxHZs0z43QUB7Li4c+74/3C1mtPbO4Vt2kpkEkJqeJ8fvI4Uh4PQ2tJljl4cWWLKVqbRa6Q0WqbG97C8DgLHam8OTQlam1R1rSKaKXDokJ0l8ECRzdNBc77LRZ+iuON0rwxvF9T5BdfEaIG7IraPGj1+Ky1NXp4jTDT6vLyupZ7sMESQzREj1XPjrn4FdDsznaPqjjFPm93kn2Y5fVv4HofgvTtcZozDkNEsThTmSjc0j4FeD7Z9jmYIOo6Sw+ik1JCTfdHwo+X4L5+rnqZX+Hqwwxj1Gqy/ovZ6PG94+2Olrkf5iMkznd2zcOoDr/ALyuLrWXNpsuDKe9MTLa15Jto/MLPouZ3r9ry3kcUKAWmOWnNsb5rjLHPmz09fFqTMybvM1z9o6ACvl5rYfqmJC0nGwWuk8Hy8riBwaEySQvTNHH2w7lb41jKdqUEuRLcLjtMY4aD4cfVe6grum7TYoUvmUo/UuLerSHD5FfRNImZPp8Lo3tfTQ1203RHUfFYfJwkksa6OVvlwMnsbiTajNlOyI3SufvIfECWtc+Vzm3fQ96R/wBK5U3YGdmnS4uJqEMfe47sd1wGgHY7IXOoHrbN3zXe7S6Hlaln4kuKYxA6o85rnUXxscJGAcfaBafc9y42Pidsm7fS5ZHx96493FPG14tkdW4g20OEtirNjjwHlj0NJ/YiGLPyMnKzI5+/ymzVJGS6Snl4a63U6ug44AXAm7IY+DGxsubk5DYREGtIY0fq27W9Bfv69ST4rs6xovanNx5WHJ2TiWZzZ3Zfq+tHO1hY0MuOt8XjfB8rdyZezuTiao3MmznSxxB4jje9zy0EuPtE3zuF3fsj5ejTnPhxkTMpuLvLpWs4NA+J4/8Aa3sLI7xzv2lm5zztEp29XkNF9OlHquR3+JkPli3Rzd24bgDe0+HzS7qNoHcPfCLBIb0Puor2drebvLdTa7OvqV5McEk7XyRAlgpgka4PBbzf1v3Lu9n/AEB+JGzLyBHmkkyEWGuN+F+HReHe/Khew47gCP8AiRktLaBA48eCtmHNyWsG+Zr3gWBI2udoA5+PKyy0q7mpHr5HaqMwBow5cWWbu2REObJW4g1yQ7inXQFcIysfEOV3E+LJFKejmt4P0uvnS5uj53dGQuke0mT1Nr+A2gAupi5OQ3UJcl+VHkRPqopGEFhArg3VdfC+Vl05RpvjWtNpJALoJraPBy0o8Wd55jNE0COV6eTLxJo9skJjc49WqcnFiGM52NPvHWutABaTVyjm6eNcF7gwjmmtHAWhuXXfA2SJ7XWPAHxWjJpszeY3NePot9PKScsdSW3hrWi0pIpYvbjcPktzJwmwQRlzj3h9oeAWtykZzG1uIQhFCQTQg2sIVvd76XO17tCdL2RwMa6Z4LreLDGg1dDqSeAPcVv4h5c3z5XnO1mnvdKzMAJja0RyEfwEOJafgS4j5DzXk1J+VenD9Xc7Ndshk5cWHqjI2967a2VrNhDj0B5pe0nx45InwStuORpa4e4r4a2CSSeKGAl8z5G1tB45/wDgvu7ncNDuXVz8V5tSbVrjXxXWsM6VrVgfu5KPHBo0fkeVzMZzMPNkZv4ZK4DnryvX9u42v1mVreu4ce8tC436Ijhne+WTdKaLRtugfaKaun+v2mOfl328gEoBHPuWsMjcS2MXQ6BdDTMEym8h4jB+q99u0eOTetb1pI3tYCS71QB4rNk9htbZOdR0XVDBPOA6WHvXRkOrmiOCPivSw4OLDGPRnU4Dh3iutpOVjvibjMmY6aIU+O/WHyWOXyM8PywbY6UvGTwO3/EfD4DpZwPLupPx5Wpkar/iUDTMGX4+jRlfWSuNr+lP1ONoizJcZ7WubbC6jZaeQCPs150TyLUnzZfOnj/jvs/2r5Tl5H+KOVwI8iIHyjgZ+K4Oo9me2eeT+ldRcxh6tflE/wDa3hfXdQ0GWXKZPLquW6ON8TxDu9U7NvBHTktsn3rQ1lp9bhaY6/X4xkTt9Pt860bQxosDoWSmV73bnu20L9wW+dw8CumYjHbpRW7oCtebu/tBenGcPNn+zSMlKTMFUhi+0FrP2nord3DOyfYbY4tPuK3cfVyyg91jzXFLHnogY8p6Ari47+nUy/l7HF1ETEd3O0keF8rqR5D2wSE1ZoAgr54MWcc8r1mB30WjY8bgZJJNzrcegv8Asss8Nm2GW9dhs1NbbvWPXcszJWH2gR7wvnudnTelEwvcAzgFpq/etjD13UYSNwErfJw/MLnt8HcfQ4mseb3NLQCT5ri9oZ+6Ed9XG1l0LPdnYk87ojE5pDeTd+PC83rmb32e4B1sj9UJhj+XK52dL1SE6Qt2JJhFK2xud0CCWOLHBw8F0YmtnaHCjYog9D5grWZhSv6BZYtPy4nboJmNPiHcgrLOS+2mFsbWBpeDizCeHDgjl8HNZVfDyXUkyWQxPmneGxsbuc4+AXLLtVjYe7xcWV3/ADy3/wASvJ9osDtXq/6rJfjY+Jd9zCXc/E+Kxmj1XzGt1Np4cifVm5+uy57y0QiQubu6OPgjUde9Ndse4CEEGmNq68PgscfY7I477IaPgFuQdk4mH15S5bdmXLqyYdy7bRrQ6w2Nu3Hgr3rag1LMkPqtpdGDQ8aLot2LCiZ0aFv+OzPlGn5OST67j0WhqIkGrPe5vBDSDt56ea7kcTW9AiVhLw4SloqtuwOB+qyu0u8jWTebVpYmoZjBTMmcDy3lZZNXzxx6ZLX9S1cqGM2ZXE/yiHj7lod1hl5Bhdx0Pop5XO+PnpXa/bqfpLIkNPy5HfF62YpGSRutzC4j/UFrm4uNjlm8AN/l7kg/gtp7hHBtiZIZSfaDQAB8x+Sly3/WLJ915/tM+Rk8QY9pbtPs3X3rzz5JCeSvU6pp2Vqs8ck5bG2Nm0BoA4+Xiph7PQx+0bK3x8csctt+HmY43vPituHDJ6gr0zNMgZ0as7caNvRoXXCbODDg/wAq3YsOvBdRsTR4KgwJ1GzTZitA5Czyw74RFuIaBXHks4FIKlu67bOc3ScYc1a2I8DHb/APotgoCb02jLFUGNJFCGt3c3XQriSaJE9xc99krrE8KCpOFrdrhMAJJ2uVW2llY+lr2nuKlit0THwKoSOJ6rRDyrEpXHS63dSGQ+azveCzlcpk5CqTKNLO4cu5lwWWW7jS0yU3vLzypIW04jKnaYcpAtWAqKa5DgClVJ2igBJ3CW5S54QJzqCxOelI/wAliu11HFWXqdylCqHaLSQgdp2ppFIKtIlJCBoSpCKZUFMlSURvoQhcugikIQFJpWnaABIQbQhRT8Ek0IHSAi+ElA74UEplQSqArG4lU4rG4rqJUkWlQTSKqBJFFB6IgQppNA7RakotBSCVNpIHaEkWqGpTKlB0UIQuHQQhCAQEIQPqhNCiikwhCAKRCEKCHKUIXSVLgVj5QhWIFB6oQqgQUIQTSaEIFSSEIBFIQqEgcoQgCEIQg//Z" alt="Influenza Vaccine">
-                        <div class="product-category">Vaccines</div>
-                    </div>
-                    <div class="product-content">
-                        <h3>Seasonal Influenza Vaccine</h3>
-                        <p class="product-description">Quadrivalent influenza vaccine offering protection against four flu virus strains.</p>
-                        
-                        <div class="product-specs">
-                            <span class="spec">Quadrivalent</span>
-                            <span class="spec">Annual Dose</span>
-                            <span class="spec">2-8°C Storage</span>
-                        </div>
-                        
-                        <a href="contact.html" class="btn">Request Information</a>
-                    </div>
-                </div>
-                
-                <!-- Antibiotics Products -->
-                <div class="product-card" data-category="antibiotics">
-                    <div class="product-img">
-                        <img src="https://www.scabpharmacy.com/wp-content/uploads/2024/10/Amoxicillin-500mg-caps-3-scaled.jpg" alt="Antibiotic Medicine">
-                        <div class="product-category">Antibiotics</div>
-                    </div>
-                    <div class="product-content">
-                        <h3>Amoxicillin Capsules</h3>
-                        <p class="product-description">Broad-spectrum antibiotic used to treat various bacterial infections.</p>
-                        
-                        <div class="product-specs">
-                            <span class="spec">Capsule Form</span>
-                            <span class="spec">250mg/500mg</span>
-                            <span class="spec">21 Capsules</span>
-                        </div>
-                        
-                        <a href="contact.html" class="btn">Request Information</a>
-                    </div>
-                </div>
-                
-                <div class="product-card" data-category="antibiotics">
-                    <div class="product-img">
-                        <img src="https://integratedlaboratories.in/wp-content/uploads/2022/04/Ceftriaxone-250mg-Intriax-injection-scaled.jpg" alt="Antibiotic Injection">
-                        <div class="product-category">Antibiotics</div>
-                    </div>
-                    <div class="product-content">
-                        <h3>Ceftriaxone Injection</h3>
-                        <p class="product-description">Third-generation cephalosporin antibiotic for serious bacterial infections.</p>
-                        
-                        <div class="product-specs">
-                            <span class="spec">Injection</span>
-                            <span class="spec">1g Vial</span>
-                            <span class="spec">Hospital Use</span>
-                        </div>
-                        
-                        <a href="contact.html" class="btn">Request Information</a>
-                    </div>
-                </div>
-                
-
-
-                <!-- Cardiology Products -->
-                <div class="product-card" data-category="cardiology">
-                    <div class="product-img">
-                        <img src="https://medecify.com/wp-content/uploads/2025/07/F-A-E-F-FE-D-3000x3000.jpeg" alt="Cardiology Medicine">
-                        <div class="product-category">Cardiology</div>
-                    </div>
-                    <div class="product-content">
-                        <h3>Atorvastatin Tablets</h3>
-                        <p class="product-description">Cholesterol-lowering medication for the prevention of cardiovascular diseases.</p>
-                        
-                        <div class="product-specs">
-                            <span class="spec">Tablet Form</span>
-                            <span class="spec">10mg/20mg</span>
-                            <span class="spec">30 Tablets</span>
-                        </div>
-                        
-                        <a href="contact.html" class="btn">Request Information</a>
-                    </div>
-                </div>
-                
-
-
-
-                <div class="product-card" data-category="cardiology">
-                    <div class="product-img">
-                        <img src="https://cpimg.tistatic.com/08202930/b/4/5-MG-Amlodipine-Besylate-Tablets-USP.jpg" alt="Blood Pressure Medicine">
-                        <div class="product-category">Cardiology</div>
-                    </div>
-                    <div class="product-content">
-                        <h3>Amlodipine Besylate</h3>
-                        <p class="product-description">Calcium channel blocker used to treat high blood pressure and coronary artery disease.</p>
-                        
-                        <div class="product-specs">
-                            <span class="spec">Tablet Form</span>
-                            <span class="spec">5mg/10mg</span>
-                            <span class="spec">90 Tablets</span>
-                        </div>
-                        
-                        <a href="contact.html" class="btn">Request Information</a>
-                    </div>
-                </div>
-
-                
-                <!-- Diabetology Products -->
-                <div class="product-card" data-category="diabetology">
-                    <div class="product-img">
-                        <img src="https://cdn.mos.cms.futurecdn.net/Njm9e5KQezGBFwYRjaTkbC-650-80.jpg.webp" alt="Diabetes Medicine">
-                        <div class="product-category">Diabetology</div>
-                    </div>
-                    <div class="product-content">
-                        <h3>Metformin Tablets</h3>
-                        <p class="product-description">First-line medication for the treatment of type 2 diabetes mellitus.</p>
-                        
-                        <div class="product-specs">
-                            <span class="spec">Tablet Form</span>
-                            <span class="spec">500mg/850mg</span>
-                            <span class="spec">60 Tablets</span>
-                        </div>
-                        
-                        <a href="contact.html" class="btn">Request Information</a>
-                    </div>
-                </div>
-
-                
-
-
-
-
-
-<!-- Product 1 -->
-<div class="product-card" data-category="cardiology">
-    <div class="product-img">
-        <img src="https://npl.com.np/wp-content/uploads/2022/11/ator_range.jpg" alt="ATOR">
-        <div class="product-category">Cardiology</div>
-    </div>
-    <div class="product-content">
-        <h3>ATOR</h3>
-        <p class="product-description">Atorvastatin tablets used to reduce cholesterol levels and prevent cardiovascular diseases.</p>
-        <div class="product-specs">
-            <span class="spec">Tablet Form</span>
-            <span class="spec">10mg/20mg</span>
-            <span class="spec">Blister Pack</span>
-        </div>
-        <a href="contact.html" class="btn">Request Information</a>
-    </div>
-</div>
-
-<!-- Product 2 -->
-<div class="product-card" data-category="analgesic">
-    <div class="product-img">
-        <img src="https://npl.com.np/wp-content/uploads/2022/11/brucet_tab.jpg" alt="BRUCET TAB">
-        <div class="product-category">Pain Relief</div>
-    </div>
-    <div class="product-content">
-        <h3>BRUCET TAB</h3>
-        <p class="product-description">Combination of Ibuprofen and Paracetamol used for relief from pain, inflammation and fever.</p>
-        <div class="product-specs">
-            <span class="spec">Tablet</span>
-            <span class="spec">Ibuprofen + Paracetamol</span>
-            <span class="spec">Blister Pack</span>
-        </div>
-        <a href="contact.html" class="btn">Request Information</a>
-    </div>
-</div>
-
-<!-- Product 3 -->
-<div class="product-card" data-category="analgesic">
-    <div class="product-img">
-        <img src="https://npl.com.np/wp-content/uploads/2022/11/brucet_susp.jpg" alt="BRUCET Suspension">
-        <div class="product-category">Pain Relief</div>
-    </div>
-    <div class="product-content">
-        <h3>BRUCET Suspension</h3>
-        <p class="product-description">Ibuprofen and Paracetamol suspension used for fever and pain relief in children.</p>
-        <div class="product-specs">
-            <span class="spec">Suspension</span>
-            <span class="spec">Pediatric Use</span>
-            <span class="spec">Bottle Pack</span>
-        </div>
-        <a href="contact.html" class="btn">Request Information</a>
-    </div>
-</div>
-
-<!-- Product 4 -->
-<div class="product-card" data-category="ent">
-    <div class="product-img">
-        <img src="https://npl.com.np/wp-content/uploads/2022/11/decon_.jpg" alt="DECON">
-        <div class="product-category">ENT</div>
-    </div>
-    <div class="product-content">
-        <h3>DECON</h3>
-        <p class="product-description">Nasal decongestant drops used to relieve nasal congestion caused by colds or allergies.</p>
-        <div class="product-specs">
-            <span class="spec">Nasal Drops</span>
-            <span class="spec">Decongestant</span>
-            <span class="spec">Bottle Pack</span>
-        </div>
-        <a href="contact.html" class="btn">Request Information</a>
-    </div>
-</div>
-
-<!-- Product 5 -->
-<div class="product-card" data-category="analgesic">
-    <div class="product-img">
-        <img src="https://npl.com.np/wp-content/uploads/2022/11/dolofen_.jpg" alt="DOLOFEN GEL">
-        <div class="product-category">Pain Relief</div>
-    </div>
-    <div class="product-content">
-        <h3>DOLOFEN GEL</h3>
-        <p class="product-description">Topical anti-inflammatory gel used for muscle pain, sprains and joint inflammation.</p>
-        <div class="product-specs">
-            <span class="spec">Topical Gel</span>
-            <span class="spec">Diclofenac</span>
-            <span class="spec">Tube Pack</span>
-        </div>
-        <a href="contact.html" class="btn">Request Information</a>
-    </div>
-</div>
-
-<!-- Product 6 -->
-<div class="product-card" data-category="analgesic">
-    <div class="product-img">
-        <img src="https://npl.com.np/wp-content/uploads/2022/11/dolofen_SR.jpg" alt="DOLOFEN SR">
-        <div class="product-category">Pain Relief</div>
-    </div>
-    <div class="product-content">
-        <h3>DOLOFEN SR</h3>
-        <p class="product-description">Sustained-release Diclofenac tablets used for long-lasting pain and inflammation relief.</p>
-        <div class="product-specs">
-            <span class="spec">SR Tablet</span>
-            <span class="spec">Diclofenac</span>
-            <span class="spec">Blister Pack</span>
-        </div>
-        <a href="contact.html" class="btn">Request Information</a>
-    </div>
-</div>
-
-<!-- Product 7 -->
-<div class="product-card" data-category="analgesic">
-    <div class="product-img">
-        <img src="https://npl.com.np/wp-content/uploads/2022/11/kelac_.jpg" alt="KELAC">
-        <div class="product-category">Pain Relief</div>
-    </div>
-    <div class="product-content">
-        <h3>KELAC</h3>
-        <p class="product-description">Ketorolac injection used for short-term management of moderate to severe pain.</p>
-        <div class="product-specs">
-            <span class="spec">Injection</span>
-            <span class="spec">Ketorolac</span>
-            <span class="spec">Ampoule Pack</span>
-        </div>
-        <a href="contact.html" class="btn">Request Information</a>
-    </div>
-</div>
-
-<!-- Product 8 -->
-<div class="product-card" data-category="dental">
-    <div class="product-img">
-        <img src="https://npl.com.np/wp-content/uploads/2022/11/orohex_M_gel.jpg" alt="OROHEX-M GEL">
-        <div class="product-category">Dental Care</div>
-    </div>
-    <div class="product-content">
-        <h3>OROHEX-M GEL</h3>
-        <p class="product-description">Dental gel used for treatment of mouth ulcers, gingivitis and gum infections.</p>
-        <div class="product-specs">
-            <span class="spec">Oral Gel</span>
-            <span class="spec">Dental Care</span>
-            <span class="spec">Tube Pack</span>
-        </div>
-        <a href="contact.html" class="btn">Request Information</a>
-    </div>
-</div>
-
-<!-- Product 9 -->
-<div class="product-card" data-category="diabetology">
-    <div class="product-img">
-        <img src="https://npl.com.np/wp-content/uploads/2022/11/empact_10.jpg" alt="EMPACT">
-        <div class="product-category">Diabetology</div>
-    </div>
-    <div class="product-content">
-        <h3>EMPACT</h3>
-        <p class="product-description">Empagliflozin tablets used for management of type 2 diabetes mellitus.</p>
-        <div class="product-specs">
-            <span class="spec">Tablet</span>
-            <span class="spec">10mg</span>
-            <span class="spec">Blister Pack</span>
-        </div>
-        <a href="contact.html" class="btn">Request Information</a>
-    </div>
-</div>
-
-<!-- Product 10 -->
-<div class="product-card" data-category="cardiology">
-    <div class="product-img">
-        <img src="https://npl.com.np/wp-content/uploads/2022/11/neva_range.jpg" alt="NEVA">
-        <div class="product-category">Cardiology</div>
-    </div>
-    <div class="product-content">
-        <h3>NEVA</h3>
-        <p class="product-description">Nebivolol tablets used to treat high blood pressure and improve heart health.</p>
-        <div class="product-specs">
-            <span class="spec">Tablet</span>
-            <span class="spec">5mg</span>
-            <span class="spec">Blister Pack</span>
-        </div>
-        <a href="contact.html" class="btn">Request Information</a>
-    </div>
-</div>
-
-<!-- Product 11 -->
-<div class="product-card" data-category="cardiology">
-    <div class="product-img">
-        <img src="https://npl.com.np/wp-content/uploads/2022/11/losap_range_.jpg" alt="LOSAP">
-        <div class="product-category">Cardiology</div>
-    </div>
-    <div class="product-content">
-        <h3>LOSAP</h3>
-        <p class="product-description">Losartan tablets used for management of hypertension and related cardiovascular risk.</p>
-        <div class="product-specs">
-            <span class="spec">Tablet Form</span>
-            <span class="spec">25mg/50mg</span>
-            <span class="spec">Blister Pack</span>
-        </div>
-        <a href="contact.html" class="btn">Request Information</a>
-    </div>
-</div>
-
-<!-- Product 12 -->
-<div class="product-card" data-category="cardiology">
-    <div class="product-img">
-        <img src="https://npl.com.np/wp-content/uploads/2022/11/losap_H.jpg" alt="LOSAP-H">
-        <div class="product-category">Cardiology</div>
-    </div>
-    <div class="product-content">
-        <h3>LOSAP-H</h3>
-        <p class="product-description">Losartan + Hydrochlorothiazide combination used for blood pressure control.</p>
-        <div class="product-specs">
-            <span class="spec">Tablet Form</span>
-            <span class="spec">Combination Drug</span>
-            <span class="spec">Blister Pack</span>
-        </div>
-        <a href="contact.html" class="btn">Request Information</a>
-    </div>
-</div>
-
-<!-- Product 13 -->
-<div class="product-card" data-category="diabetology">
-    <div class="product-img">
-        <img src="https://npl.com.np/wp-content/uploads/2022/11/formin_SR_range.jpg" alt="FORMIN-SR">
-        <div class="product-category">Diabetology</div>
-    </div>
-    <div class="product-content">
-        <h3>FORMIN-SR</h3>
-        <p class="product-description">Metformin sustained-release tablets used to help control blood glucose in type 2 diabetes.</p>
-        <div class="product-specs">
-            <span class="spec">SR Tablet</span>
-            <span class="spec">500mg/1000mg</span>
-            <span class="spec">Blister Pack</span>
-        </div>
-        <a href="contact.html" class="btn">Request Information</a>
-    </div>
-</div>
-
-<!-- Product 14 -->
-<div class="product-card" data-category="diabetology">
-    <div class="product-img">
-        <img src="https://npl.com.np/wp-content/uploads/2022/11/formin_G1.jpg" alt="FORMIN-G1">
-        <div class="product-category">Diabetology</div>
-    </div>
-    <div class="product-content">
-        <h3>FORMIN-G1</h3>
-        <p class="product-description">Glimepiride + Metformin combination used for glycaemic control in type 2 diabetes.</p>
-        <div class="product-specs">
-            <span class="spec">SR Tablet</span>
-            <span class="spec">Combination Drug</span>
-            <span class="spec">Blister Pack</span>
-        </div>
-        <a href="contact.html" class="btn">Request Information</a>
-    </div>
-</div>
-
-<!-- Product 15 -->
-<div class="product-card" data-category="allergy">
-    <div class="product-img">
-        <img src="https://npl.com.np/wp-content/uploads/2022/11/lctz_.jpg" alt="L-CTZ Syrup">
-        <div class="product-category">Allergy</div>
-    </div>
-    <div class="product-content">
-        <h3>L-CTZ Syrup</h3>
-        <p class="product-description">Levocetirizine syrup used for allergic rhinitis symptoms and urticaria (hives).</p>
-        <div class="product-specs">
-            <span class="spec">Syrup</span>
-            <span class="spec">2.5mg/5ml</span>
-            <span class="spec">30 ml Bottle</span>
-        </div>
-        <a href="contact.html" class="btn">Request Information</a>
-    </div>
-</div>
-
-<!-- Product 16 -->
-<div class="product-card" data-category="antiseptic">
-    <div class="product-img">
-        <img src="https://npl.com.np/wp-content/uploads/2022/11/ovidon_.jpg" alt="OVIDON Solution">
-        <div class="product-category">Antiseptic</div>
-    </div>
-    <div class="product-content">
-        <h3>OVIDON Solution</h3>
-        <p class="product-description">Povidone-iodine solution used for antiseptic cleansing of cuts, wounds, and minor burns.</p>
-        <div class="product-specs">
-            <span class="spec">Solution</span>
-            <span class="spec">Povidone Iodine</span>
-            <span class="spec">30/100 ml</span>
-        </div>
-        <a href="contact.html" class="btn">Request Information</a>
-    </div>
-</div>
-
-<!-- Product 17 -->
-<div class="product-card" data-category="cardiology">
-    <div class="product-img">
-        <img src="https://npl.com.np/wp-content/uploads/2023/07/Telmi-80am-360x220.jpg" alt="TELMI 80 AM">
-        <div class="product-category">Cardiology</div>
-    </div>
-    <div class="product-content">
-        <h3>TELMI 80 AM</h3>
-        <p class="product-description">Combination antihypertensive used for controlling high blood pressure in indicated patients.</p>
-        <div class="product-specs">
-            <span class="spec">Tablet Form</span>
-            <span class="spec">Combination Drug</span>
-            <span class="spec">Blister Pack</span>
-        </div>
-        <a href="contact.html" class="btn">Request Information</a>
-    </div>
-</div>
-
-<!-- Product 18 -->
-<div class="product-card" data-category="cardiology">
-    <div class="product-img">
-        <img src="https://npl.com.np/wp-content/uploads/2022/11/amlod_AT.jpg" alt="AMLOD-AT">
-        <div class="product-category">Cardiology</div>
-    </div>
-    <div class="product-content">
-        <h3>AMLOD-AT</h3>
-        <p class="product-description">Combination blood pressure medicine used for hypertension management.</p>
-        <div class="product-specs">
-            <span class="spec">Tablet Form</span>
-            <span class="spec">Combination Drug</span>
-            <span class="spec">Blister Pack</span>
-        </div>
-        <a href="contact.html" class="btn">Request Information</a>
-    </div>
-</div>
-
-<!-- Product 19 -->
-<div class="product-card" data-category="cardiology">
-    <div class="product-img">
-        <img src="https://npl.com.np/wp-content/uploads/2022/11/enpil_range.jpg" alt="ENPIL">
-        <div class="product-category">Cardiology</div>
-    </div>
-    <div class="product-content">
-        <h3>ENPIL</h3>
-        <p class="product-description">Antihypertensive medicine used for blood pressure control as prescribed.</p>
-        <div class="product-specs">
-            <span class="spec">Tablet Form</span>
-            <span class="spec">Strength Varies</span>
-            <span class="spec">Blister Pack</span>
-        </div>
-        <a href="contact.html" class="btn">Request Information</a>
-    </div>
-</div>
-
-<!-- Product 20 -->
-<div class="product-card" data-category="allergy">
-    <div class="product-img">
-        <img src="https://npl.com.np/wp-content/uploads/2022/11/ctz_tab.jpg" alt="CTZ TAB">
-        <div class="product-category">Allergy</div>
-    </div>
-    <div class="product-content">
-        <h3>CTZ TAB</h3>
-        <p class="product-description">Cetirizine tablets used for allergy symptoms such as sneezing, runny nose, and itching.</p>
-        <div class="product-specs">
-            <span class="spec">Tablet</span>
-            <span class="spec">Anti-Histamine</span>
-            <span class="spec">Blister Pack</span>
-        </div>
-        <a href="contact.html" class="btn">Request Information</a>
-    </div>
-</div>
-
-
-
-
-
-
-
-
-                
-               
-                </div>
+            
+            <div class="category-card" data-category="antibiotics">
+                <i class="fas fa-bacteria category-icon"></i>
+                <h3>Antibiotics</h3>
+                <p>Anti-infective agents</p>
             </div>
+            
+            <div class="category-card" data-category="cardiology">
+                <i class="fas fa-heartbeat category-icon"></i>
+                <h3>Cardiology</h3>
+                <p>Heart & vascular medicines</p>
+            </div>
+            
+            <div class="category-card" data-category="diabetology">
+                <i class="fas fa-heart category-icon"></i>
+                <h3>Diabetology</h3>
+                <p>Diabetes management</p>
+            </div>
+            
+            <div class="category-card" data-category="pediatrics">
+                <i class="fas fa-baby category-icon"></i>
+                <h3>Pediatrics</h3>
+                <p>Children's medicines</p>
+            </div>
+
+            <!-- Added Categories -->
+
+            <div class="category-card" data-category="anesthetics">
+                <i class="fas fa-procedures category-icon"></i>
+                <h3>Anesthetics</h3>
+                <p>Pain control & surgical anesthesia</p>
+            </div>
+
+<div class="category-card" data-category="gastroenterology">
+    <i class="fas fa-capsules category-icon"></i>
+    <h3>Gastroenterology</h3>
+    <p>Digestive system medicines</p>
+</div>      <div class="category-card" data-category="gynecology">
+                <i class="fas fa-venus category-icon"></i>
+                <h3>Gynecology</h3>
+                <p>Women's health medicines</p>
+            </div>
+
+            <div class="category-card" data-category="hematology">
+                <i class="fas fa-tint category-icon"></i>
+                <h3>Hematology</h3>
+                <p>Blood related treatments</p>
+            </div>
+
+            <div class="category-card" data-category="neurology">
+                <i class="fas fa-brain category-icon"></i>
+                <h3>Neurology</h3>
+                <p>Nervous system medicines</p>
+            </div>
+
+            <div class="category-card" data-category="obstetrics">
+                <i class="fas fa-user-md category-icon"></i>
+                <h3>Obstetrics and Gynecology </h3>
+                <p>Maternal & reproductive healthcare</p>
+            </div>
+
+            <div class="category-card" data-category="oncology">
+                <i class="fas fa-ribbon category-icon"></i>
+                <h3>Oncology</h3>
+                <p>Cancer treatment medicines</p>
+            </div>
+
+            <div class="category-card" data-category="ophthalmology">
+                <i class="fas fa-eye category-icon"></i>
+                <h3>Ophthalmology</h3>
+                <p>Eye care medicines</p>
+            </div>
+
+            <div class="category-card" data-category="orthopedics">
+                <i class="fas fa-bone category-icon"></i>
+                <h3>Orthopedics</h3>
+                <p>Bone & joint treatments</p>
+            </div>
+
+           <div class="category-card" data-category="sexual-health">
+    <i class="fas fa-hand-holding-heart category-icon"></i>
+    <h3>Sexual Health</h3>
+    <p>Reproductive & sexual wellness</p>
+</div>
+
+
+           <div class="category-card" data-category="urology">
+    <i class="fas fa-flask category-icon"></i>
+    <h3>Urology</h3>
+    <p>Urinary system treatments</p>
+</div>
         </div>
-    </section>
+    </div>
+</section>
+
+
+<!-- Products Section -->
+<section class="products-section">
+  <div class="container">
+    <div class="products-grid" id="productsContainer">
+
+      <!-- ===================== VACCINES (6) ===================== -->
+      <div class="product-card" data-category="vaccines">
+        <div class="product-img icon-bg">
+          <i class="fas fa-syringe"></i>
+          <div class="product-category">Vaccines</div>
+        </div>
+        <div class="product-content">
+          <h3>Seasonal Influenza Vaccine</h3>
+          <p class="product-description">Vaccine to reduce risk of seasonal influenza infection as per immunization guidelines.</p>
+          <div class="product-specs">
+            <span class="spec">Annual Dose</span><span class="spec">2–8°C Storage</span><span class="spec">IM Injection</span>
+          </div>
+          <a href="contact.html" class="btn">Request Information</a>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="vaccines">
+        <div class="product-img icon-bg">
+          <i class="fas fa-vial"></i>
+          <div class="product-category">Vaccines</div>
+        </div>
+        <div class="product-content">
+          <h3>Hepatitis B Vaccine</h3>
+          <p class="product-description">Vaccine used for prevention of hepatitis B virus infection.</p>
+          <div class="product-specs">
+            <span class="spec">Pediatric/Adult</span><span class="spec">Cold Chain</span><span class="spec">IM Injection</span>
+          </div>
+          <a href="contact.html" class="btn">Request Information</a>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="vaccines">
+        <div class="product-img icon-bg">
+          <i class="fas fa-shield-virus"></i>
+          <div class="product-category">Vaccines</div>
+        </div>
+        <div class="product-content">
+          <h3>MMR Vaccine</h3>
+          <p class="product-description">Vaccine used for prevention of measles, mumps, and rubella infections.</p>
+          <div class="product-specs">
+            <span class="spec">Routine Schedule</span><span class="spec">Cold Chain</span><span class="spec">SC Injection</span>
+          </div>
+          <a href="contact.html" class="btn">Request Information</a>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="vaccines">
+        <div class="product-img icon-bg">
+          <i class="fas fa-shield"></i>
+          <div class="product-category">Vaccines</div>
+        </div>
+        <div class="product-content">
+          <h3>Tetanus Toxoid Vaccine</h3>
+          <p class="product-description">Vaccine used to protect against tetanus infection as per vaccination schedule.</p>
+          <div class="product-specs">
+            <span class="spec">Booster</span><span class="spec">2–8°C Storage</span><span class="spec">IM Injection</span>
+          </div>
+          <a href="contact.html" class="btn">Request Information</a>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="vaccines">
+        <div class="product-img icon-bg">
+          <i class="fas fa-virus"></i>
+          <div class="product-category">Vaccines</div>
+        </div>
+        <div class="product-content">
+          <h3>Polio Vaccine</h3>
+          <p class="product-description">Vaccine used to prevent poliomyelitis and support routine immunization programs.</p>
+          <div class="product-specs">
+            <span class="spec">OPV/IPV</span><span class="spec">Cold Chain</span><span class="spec">Program Supply</span>
+          </div>
+          <a href="contact.html" class="btn">Request Information</a>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="vaccines">
+        <div class="product-img icon-bg">
+          <i class="fas fa-droplet"></i>
+          <div class="product-category">Vaccines</div>
+        </div>
+        <div class="product-content">
+          <h3>Typhoid Vaccine</h3>
+          <p class="product-description">Vaccine used for prevention of typhoid fever in eligible age groups.</p>
+          <div class="product-specs">
+            <span class="spec">Single Dose</span><span class="spec">Cold Chain</span><span class="spec">IM Injection</span>
+          </div>
+          <a href="contact.html" class="btn">Request Information</a>
+        </div>
+      </div>
+
+
+      <!-- ===================== ANTIBIOTICS (8) ===================== -->
+      <div class="product-card" data-category="antibiotics">
+        <div class="product-img icon-bg">
+          <i class="fas fa-capsules"></i>
+          <div class="product-category">Antibiotics</div>
+        </div>
+        <div class="product-content">
+          <h3>Amoxicillin Capsules</h3>
+          <p class="product-description">Broad-spectrum antibiotic used to treat various bacterial infections.</p>
+          <div class="product-specs">
+            <span class="spec">Capsule</span><span class="spec">250mg / 500mg</span><span class="spec">Prescription</span>
+          </div>
+          <a href="contact.html" class="btn">Request Information</a>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="antibiotics">
+        <div class="product-img icon-bg">
+          <i class="fas fa-tablets"></i>
+          <div class="product-category">Antibiotics</div>
+        </div>
+        <div class="product-content">
+          <h3>Azithromycin Tablets</h3>
+          <p class="product-description">Antibiotic used for respiratory and soft tissue bacterial infections as prescribed.</p>
+          <div class="product-specs">
+            <span class="spec">Tablet</span><span class="spec">250mg / 500mg</span><span class="spec">Prescription</span>
+          </div>
+          <a href="contact.html" class="btn">Request Information</a>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="antibiotics">
+        <div class="product-img icon-bg">
+          <i class="fas fa-capsules"></i>
+          <div class="product-category">Antibiotics</div>
+        </div>
+        <div class="product-content">
+          <h3>Doxycycline Capsules</h3>
+          <p class="product-description">Antibiotic used for selected bacterial infections as prescribed.</p>
+          <div class="product-specs">
+            <span class="spec">Capsule</span><span class="spec">100mg</span><span class="spec">Prescription</span>
+          </div>
+          <a href="contact.html" class="btn">Request Information</a>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="antibiotics">
+        <div class="product-img icon-bg">
+          <i class="fas fa-tablets"></i>
+          <div class="product-category">Antibiotics</div>
+        </div>
+        <div class="product-content">
+          <h3>Metronidazole Tablets</h3>
+          <p class="product-description">Antimicrobial used for anaerobic bacterial and protozoal infections as indicated.</p>
+          <div class="product-specs">
+            <span class="spec">Tablet</span><span class="spec">400mg</span><span class="spec">Prescription</span>
+          </div>
+          <a href="contact.html" class="btn">Request Information</a>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="antibiotics">
+        <div class="product-img icon-bg">
+          <i class="fas fa-syringe"></i>
+          <div class="product-category">Antibiotics</div>
+        </div>
+        <div class="product-content">
+          <h3>Ceftriaxone Injection</h3>
+          <p class="product-description">Cephalosporin antibiotic injection for serious bacterial infections in clinical use.</p>
+          <div class="product-specs">
+            <span class="spec">Injection</span><span class="spec">1g Vial</span><span class="spec">Hospital Use</span>
+          </div>
+          <a href="contact.html" class="btn">Request Information</a>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="antibiotics">
+        <div class="product-img icon-bg">
+          <i class="fas fa-syringe"></i>
+          <div class="product-category">Antibiotics</div>
+        </div>
+        <div class="product-content">
+          <h3>Gentamicin Injection</h3>
+          <p class="product-description">Antibiotic injection used for selected serious bacterial infections in clinical settings.</p>
+          <div class="product-specs">
+            <span class="spec">Injection</span><span class="spec">80mg/2ml</span><span class="spec">Hospital Use</span>
+          </div>
+          <a href="contact.html" class="btn">Request Information</a>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="antibiotics">
+        <div class="product-img icon-bg">
+          <i class="fas fa-jar"></i>
+          <div class="product-category">Antibiotics</div>
+        </div>
+        <div class="product-content">
+          <h3>Amoxicillin-Clavulanate Suspension</h3>
+          <p class="product-description">Combination antibiotic suspension used for selected bacterial infections as prescribed.</p>
+          <div class="product-specs">
+            <span class="spec">Dry Syrup</span><span class="spec">Pediatric/Adult</span><span class="spec">Prescription</span>
+          </div>
+          <a href="contact.html" class="btn">Request Information</a>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="antibiotics">
+        <div class="product-img icon-bg">
+          <i class="fas fa-hand-holding-medical"></i>
+          <div class="product-category">Antibiotics</div>
+        </div>
+        <div class="product-content">
+          <h3>Mupirocin Ointment</h3>
+          <p class="product-description">Topical antibiotic used for selected bacterial skin infections as prescribed.</p>
+          <div class="product-specs">
+            <span class="spec">Ointment</span><span class="spec">5g / 10g</span><span class="spec">Topical</span>
+          </div>
+          <a href="contact.html" class="btn">Request Information</a>
+        </div>
+      </div>
+
+
+      <!-- ===================== CARDIOLOGY (8) ===================== -->
+      <div class="product-card" data-category="cardiology">
+        <div class="product-img icon-bg">
+          <i class="fas fa-heartbeat"></i>
+          <div class="product-category">Cardiology</div>
+        </div>
+        <div class="product-content">
+          <h3>Amlodipine Tablets</h3>
+          <p class="product-description">Used in management of high blood pressure as prescribed.</p>
+          <div class="product-specs">
+            <span class="spec">Tablet</span><span class="spec">5mg / 10mg</span><span class="spec">Prescription</span>
+          </div>
+          <a href="contact.html" class="btn">Request Information</a>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="cardiology">
+        <div class="product-img icon-bg">
+          <i class="fas fa-notes-medical"></i>
+          <div class="product-category">Cardiology</div>
+        </div>
+        <div class="product-content">
+          <h3>Atorvastatin Tablets</h3>
+          <p class="product-description">Statin medicine used to help manage cholesterol levels as advised.</p>
+          <div class="product-specs">
+            <span class="spec">Tablet</span><span class="spec">10mg / 20mg</span><span class="spec">Prescription</span>
+          </div>
+          <a href="contact.html" class="btn">Request Information</a>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="cardiology">
+        <div class="product-img icon-bg">
+          <i class="fas fa-wave-square"></i>
+          <div class="product-category">Cardiology</div>
+        </div>
+        <div class="product-content">
+          <h3>Losartan Tablets</h3>
+          <p class="product-description">ARB medicine used for blood pressure management as prescribed.</p>
+          <div class="product-specs">
+            <span class="spec">Tablet</span><span class="spec">25mg / 50mg</span><span class="spec">Prescription</span>
+          </div>
+          <a href="contact.html" class="btn">Request Information</a>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="cardiology">
+        <div class="product-img icon-bg">
+          <i class="fas fa-heart"></i>
+          <div class="product-category">Cardiology</div>
+        </div>
+        <div class="product-content">
+          <h3>Telmisartan Tablets</h3>
+          <p class="product-description">ARB medicine used for management of hypertension under medical advice.</p>
+          <div class="product-specs">
+            <span class="spec">Tablet</span><span class="spec">40mg / 80mg</span><span class="spec">Prescription</span>
+          </div>
+          <a href="contact.html" class="btn">Request Information</a>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="cardiology">
+        <div class="product-img icon-bg">
+          <i class="fas fa-stethoscope"></i>
+          <div class="product-category">Cardiology</div>
+        </div>
+        <div class="product-content">
+          <h3>Metoprolol Tablets</h3>
+          <p class="product-description">Beta blocker used for blood pressure and heart rate control as prescribed.</p>
+          <div class="product-specs">
+            <span class="spec">Tablet</span><span class="spec">25mg / 50mg</span><span class="spec">Prescription</span>
+          </div>
+          <a href="contact.html" class="btn">Request Information</a>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="cardiology">
+        <div class="product-img icon-bg">
+          <i class="fas fa-heart-circle-check"></i>
+          <div class="product-category">Cardiology</div>
+        </div>
+        <div class="product-content">
+          <h3>Clopidogrel Tablets</h3>
+          <p class="product-description">Antiplatelet medicine used in selected cardiovascular conditions as advised.</p>
+          <div class="product-specs">
+            <span class="spec">Tablet</span><span class="spec">75mg</span><span class="spec">Prescription</span>
+          </div>
+          <a href="contact.html" class="btn">Request Information</a>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="cardiology">
+        <div class="product-img icon-bg">
+          <i class="fas fa-pills"></i>
+          <div class="product-category">Cardiology</div>
+        </div>
+        <div class="product-content">
+          <h3>Aspirin (Low Dose) Tablets</h3>
+          <p class="product-description">Antiplatelet medicine used in selected cardiovascular conditions as advised.</p>
+          <div class="product-specs">
+            <span class="spec">Tablet</span><span class="spec">75mg / 81mg</span><span class="spec">Prescription</span>
+          </div>
+          <a href="contact.html" class="btn">Request Information</a>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="cardiology">
+        <div class="product-img icon-bg">
+          <i class="fas fa-droplet"></i>
+          <div class="product-category">Cardiology</div>
+        </div>
+        <div class="product-content">
+          <h3>Furosemide Tablets</h3>
+          <p class="product-description">Diuretic medicine used in selected cardiovascular and fluid retention conditions.</p>
+          <div class="product-specs">
+            <span class="spec">Tablet</span><span class="spec">20mg / 40mg</span><span class="spec">Prescription</span>
+          </div>
+          <a href="contact.html" class="btn">Request Information</a>
+        </div>
+      </div>
+
+
+      <!-- ===================== DIABETOLOGY (7) ===================== -->
+      <div class="product-card" data-category="diabetology">
+        <div class="product-img icon-bg">
+          <i class="fas fa-tint"></i>
+          <div class="product-category">Diabetology</div>
+        </div>
+        <div class="product-content">
+          <h3>Metformin Tablets</h3>
+          <p class="product-description">Common first-line medicine used for management of type 2 diabetes.</p>
+          <div class="product-specs">
+            <span class="spec">Tablet</span><span class="spec">500mg / 850mg</span><span class="spec">Prescription</span>
+          </div>
+          <a href="contact.html" class="btn">Request Information</a>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="diabetology">
+        <div class="product-img icon-bg">
+          <i class="fas fa-tablets"></i>
+          <div class="product-category">Diabetology</div>
+        </div>
+        <div class="product-content">
+          <h3>Glimepiride Tablets</h3>
+          <p class="product-description">Medicine used to help control blood glucose levels as advised.</p>
+          <div class="product-specs">
+            <span class="spec">Tablet</span><span class="spec">1mg / 2mg</span><span class="spec">Prescription</span>
+          </div>
+          <a href="contact.html" class="btn">Request Information</a>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="diabetology">
+        <div class="product-img icon-bg">
+          <i class="fas fa-pills"></i>
+          <div class="product-category">Diabetology</div>
+        </div>
+        <div class="product-content">
+          <h3>Gliclazide Tablets</h3>
+          <p class="product-description">Antidiabetic medicine used to help control blood sugar in type 2 diabetes as advised.</p>
+          <div class="product-specs">
+            <span class="spec">Tablet</span><span class="spec">40mg / 80mg</span><span class="spec">Prescription</span>
+          </div>
+          <a href="contact.html" class="btn">Request Information</a>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="diabetology">
+        <div class="product-img icon-bg">
+          <i class="fas fa-syringe"></i>
+          <div class="product-category">Diabetology</div>
+        </div>
+        <div class="product-content">
+          <h3>Insulin Injection (Vial/Pen)</h3>
+          <p class="product-description">Insulin used for diabetes management; options include vial and pen formats.</p>
+          <div class="product-specs">
+            <span class="spec">Injection</span><span class="spec">Cold Chain</span><span class="spec">Prescription</span>
+          </div>
+          <a href="contact.html" class="btn">Request Information</a>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="diabetology">
+        <div class="product-img icon-bg">
+          <i class="fas fa-vials"></i>
+          <div class="product-category">Diabetology</div>
+        </div>
+        <div class="product-content">
+          <h3>Blood Glucose Test Strips</h3>
+          <p class="product-description">Test strips for monitoring blood glucose levels with compatible glucometers.</p>
+          <div class="product-specs">
+            <span class="spec">Diagnostics</span><span class="spec">Pack Options</span><span class="spec">Home/Clinic</span>
+          </div>
+          <a href="contact.html" class="btn">Request Information</a>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="diabetology">
+        <div class="product-img icon-bg">
+          <i class="fas fa-capsules"></i>
+          <div class="product-category">Diabetology</div>
+        </div>
+        <div class="product-content">
+          <h3>Sitagliptin Tablets</h3>
+          <p class="product-description">Medicine used for glucose control in type 2 diabetes as prescribed.</p>
+          <div class="product-specs">
+            <span class="spec">Tablet</span><span class="spec">50mg / 100mg</span><span class="spec">Prescription</span>
+          </div>
+          <a href="contact.html" class="btn">Request Information</a>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="diabetology">
+        <div class="product-img icon-bg">
+          <i class="fas fa-pills"></i>
+          <div class="product-category">Diabetology</div>
+        </div>
+        <div class="product-content">
+          <h3>Empagliflozin Tablets</h3>
+          <p class="product-description">Medicine used for selected type 2 diabetes patients as advised.</p>
+          <div class="product-specs">
+            <span class="spec">Tablet</span><span class="spec">10mg / 25mg</span><span class="spec">Prescription</span>
+          </div>
+          <a href="contact.html" class="btn">Request Information</a>
+        </div>
+      </div>
+
+
+      <!-- ===================== PEDIATRICS (6) ===================== -->
+      <div class="product-card" data-category="pediatrics">
+        <div class="product-img icon-bg">
+          <i class="fas fa-baby"></i>
+          <div class="product-category">Pediatrics</div>
+        </div>
+        <div class="product-content">
+          <h3>Paracetamol Syrup</h3>
+          <p class="product-description">Used for relief of fever and mild pain in children as advised.</p>
+          <div class="product-specs">
+            <span class="spec">Syrup</span><span class="spec">120mg/5ml</span><span class="spec">Pediatric</span>
+          </div>
+          <a href="contact.html" class="btn">Request Information</a>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="pediatrics">
+        <div class="product-img icon-bg">
+          <i class="fas fa-bottle-droplet"></i>
+          <div class="product-category">Pediatrics</div>
+        </div>
+        <div class="product-content">
+          <h3>Oral Rehydration Salts (ORS)</h3>
+          <p class="product-description">ORS sachets to help prevent dehydration due to diarrhea as per guidelines.</p>
+          <div class="product-specs">
+            <span class="spec">Sachets</span><span class="spec">WHO Formula</span><span class="spec">Pediatric/Adult</span>
+          </div>
+          <a href="contact.html" class="btn">Request Information</a>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="pediatrics">
+        <div class="product-img icon-bg">
+          <i class="fas fa-seedling"></i>
+          <div class="product-category">Pediatrics</div>
+        </div>
+        <div class="product-content">
+          <h3>Zinc Supplement</h3>
+          <p class="product-description">Zinc supplementation used as per pediatric guidance.</p>
+          <div class="product-specs">
+            <span class="spec">10mg / 20mg</span><span class="spec">Tablet/Syrup</span><span class="spec">Pediatric</span>
+          </div>
+          <a href="contact.html" class="btn">Request Information</a>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="pediatrics">
+        <div class="product-img icon-bg">
+          <i class="fas fa-capsules"></i>
+          <div class="product-category">Pediatrics</div>
+        </div>
+        <div class="product-content">
+          <h3>Multivitamin Drops</h3>
+          <p class="product-description">Vitamin drops to support nutritional supplementation in children as advised.</p>
+          <div class="product-specs">
+            <span class="spec">Drops</span><span class="spec">30ml Bottle</span><span class="spec">Pediatric</span>
+          </div>
+          <a href="contact.html" class="btn">Request Information</a>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="pediatrics">
+        <div class="product-img icon-bg">
+          <i class="fas fa-head-side-cough"></i>
+          <div class="product-category">Pediatrics</div>
+        </div>
+        <div class="product-content">
+          <h3>Cough Syrup (Pediatric)</h3>
+          <p class="product-description">Pediatric cough preparation used as per physician guidance for symptom relief.</p>
+          <div class="product-specs">
+            <span class="spec">Syrup</span><span class="spec">100ml Bottle</span><span class="spec">Pediatric</span>
+          </div>
+          <a href="contact.html" class="btn">Request Information</a>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="pediatrics">
+        <div class="product-img icon-bg">
+          <i class="fas fa-bacteria"></i>
+          <div class="product-category">Pediatrics</div>
+        </div>
+        <div class="product-content">
+          <h3>Probiotic Sachets</h3>
+          <p class="product-description">Probiotic supplementation used as advised to support gut health in children.</p>
+          <div class="product-specs">
+            <span class="spec">Sachets</span><span class="spec">Pack Options</span><span class="spec">Pediatric</span>
+          </div>
+          <a href="contact.html" class="btn">Request Information</a>
+        </div>
+      </div>
+
+
+      <!-- ===================== EXTRA CATEGORIES (5) ===================== -->
+      <div class="product-card" data-category="gastroenterology">
+        <div class="product-img icon-bg">
+          <i class="fas fa-stomach"></i>
+          <div class="product-category">Gastroenterology</div>
+        </div>
+        <div class="product-content">
+          <h3>Omeprazole Capsules</h3>
+          <p class="product-description">Used for acid-related conditions such as gastritis and reflux as prescribed.</p>
+          <div class="product-specs">
+            <span class="spec">Capsule</span><span class="spec">20mg / 40mg</span><span class="spec">Prescription</span>
+          </div>
+          <a href="contact.html" class="btn">Request Information</a>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="gynecology">
+        <div class="product-img icon-bg">
+          <i class="fas fa-venus"></i>
+          <div class="product-category">Gynecology</div>
+        </div>
+        <div class="product-content">
+          <h3>Folic Acid Tablets</h3>
+          <p class="product-description">Supplement used to support healthy red blood cell formation as advised.</p>
+          <div class="product-specs">
+            <span class="spec">Tablet</span><span class="spec">5mg</span><span class="spec">Supplement</span>
+          </div>
+          <a href="contact.html" class="btn">Request Information</a>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="neurology">
+        <div class="product-img icon-bg">
+          <i class="fas fa-brain"></i>
+          <div class="product-category">Neurology</div>
+        </div>
+        <div class="product-content">
+          <h3>Gabapentin Capsules</h3>
+          <p class="product-description">Medicine used for selected neuropathic pain and neurological conditions as prescribed.</p>
+          <div class="product-specs">
+            <span class="spec">Capsule</span><span class="spec">100mg / 300mg</span><span class="spec">Prescription</span>
+          </div>
+          <a href="contact.html" class="btn">Request Information</a>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="ophthalmology">
+        <div class="product-img icon-bg">
+          <i class="fas fa-eye"></i>
+          <div class="product-category">Ophthalmology</div>
+        </div>
+        <div class="product-content">
+          <h3>Lubricating Eye Drops</h3>
+          <p class="product-description">Eye drops used to help relieve dryness and irritation as advised.</p>
+          <div class="product-specs">
+            <span class="spec">Drops</span><span class="spec">10ml</span><span class="spec">Ocular Use</span>
+          </div>
+          <a href="contact.html" class="btn">Request Information</a>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="urology">
+        <div class="product-img icon-bg">
+          <i class="fas fa-flask"></i>
+          <div class="product-category">Urology</div>
+        </div>
+        <div class="product-content">
+          <h3>Tamsulosin Capsules</h3>
+          <p class="product-description">Medicine used for urinary symptoms associated with enlarged prostate as prescribed.</p>
+          <div class="product-specs">
+            <span class="spec">Capsule</span><span class="spec">0.4mg</span><span class="spec">Prescription</span>
+          </div>
+          <a href="contact.html" class="btn">Request Information</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
 
 
 
@@ -1297,90 +1494,102 @@
     </footer>
 
 
-    <script>
-        // Mobile Navigation Toggle
-        const mobileToggle = document.querySelector('.mobile-toggle');
-        const navLinks = document.querySelector('.nav-links');
-        
-        mobileToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            mobileToggle.querySelector('i').classList.toggle('fa-bars');
-            mobileToggle.querySelector('i').classList.toggle('fa-times');
-        });
-        
-        // Close mobile menu when clicking on a link
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-                mobileToggle.querySelector('i').classList.add('fa-bars');
-                mobileToggle.querySelector('i').classList.remove('fa-times');
-            });
-        });
-        
-        // Product Category Filtering
-        const categoryCards = document.querySelectorAll('.category-card');
-        const productCards = document.querySelectorAll('.product-card');
-        
-        categoryCards.forEach(card => {
-            card.addEventListener('click', () => {
-                // Update active category
-                categoryCards.forEach(c => c.classList.remove('active'));
-                card.classList.add('active');
-                
-                const selectedCategory = card.getAttribute('data-category');
-                
-                // Filter products
-                productCards.forEach(product => {
-                    if (selectedCategory === 'all' || product.getAttribute('data-category') === selectedCategory) {
-                        product.style.display = 'block';
-                        setTimeout(() => {
-                            product.style.opacity = '1';
-                            product.style.transform = 'translateY(0)';
-                        }, 10);
-                    } else {
-                        product.style.opacity = '0';
-                        product.style.transform = 'translateY(20px)';
-                        setTimeout(() => {
-                            product.style.display = 'none';
-                        }, 300);
-                    }
-                });
-            });
-        });
-        
-        // Product Cards Animation on Scroll
-        const observerOptions = {
-            threshold: 0.2,
-            rootMargin: '0px 0px -50px 0px'
-        };
-        
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-        
-        productCards.forEach(card => {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(20px)';
-            card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-            observer.observe(card);
-        });
-        
-        // Category Cards Animation
-        categoryCards.forEach((card, index) => {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(20px)';
-            card.style.transition = `opacity 0.5s ease ${index * 0.1}s, transform 0.5s ease ${index * 0.1}s`;
-            
-            setTimeout(() => {
-                card.style.opacity = '1';
-                card.style.transform = 'translateY(0)';
-            }, 300 + (index * 100));
-        });
-    </script>
+    
+
+
+
+
+<script>
+  // Mobile Navigation Toggle
+  const mobileToggle = document.querySelector('.mobile-toggle');
+  const navLinks = document.querySelector('.nav-links');
+
+  if (mobileToggle && navLinks) {
+    mobileToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      mobileToggle.querySelector('i').classList.toggle('fa-bars');
+      mobileToggle.querySelector('i').classList.toggle('fa-times');
+    });
+
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        mobileToggle.querySelector('i').classList.add('fa-bars');
+        mobileToggle.querySelector('i').classList.remove('fa-times');
+      });
+    });
+  }
+
+  // Product Category Filtering
+  const categoryCards = document.querySelectorAll('.category-card');
+
+  function getProductCards() {
+    return document.querySelectorAll('.product-card');
+  }
+
+  categoryCards.forEach(card => {
+    card.addEventListener('click', () => {
+      categoryCards.forEach(c => c.classList.remove('active'));
+      card.classList.add('active');
+
+      const selectedCategory = card.getAttribute('data-category');
+      const productCards = getProductCards();
+
+      productCards.forEach(product => {
+        const match = (selectedCategory === 'all' || product.getAttribute('data-category') === selectedCategory);
+
+        if (match) {
+          product.style.display = 'block';
+          requestAnimationFrame(() => {
+            product.style.opacity = '1';
+            product.style.transform = 'translateY(0)';
+          });
+        } else {
+          product.style.opacity = '0';
+          product.style.transform = 'translateY(20px)';
+          setTimeout(() => {
+            product.style.display = 'none';
+          }, 250);
+        }
+      });
+    });
+  });
+
+  // Product Cards Animation on Scroll
+  const observerOptions = { threshold: 0.2, rootMargin: '0px 0px -50px 0px' };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, observerOptions);
+
+  // init animation state
+  getProductCards().forEach(card => {
+    card.style.opacity = '0';
+    card.style.transform = 'translateY(20px)';
+    card.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+    observer.observe(card);
+  });
+
+  // Category Cards Animation
+  categoryCards.forEach((card, index) => {
+    card.style.opacity = '0';
+    card.style.transform = 'translateY(20px)';
+    card.style.transition = `opacity 0.5s ease ${index * 0.1}s, transform 0.5s ease ${index * 0.1}s`;
+
+    setTimeout(() => {
+      card.style.opacity = '1';
+      card.style.transform = 'translateY(0)';
+    }, 300 + (index * 100));
+  });
+</script>
+
+
+
+
 </body>
 </html>
