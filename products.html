@@ -684,13 +684,21 @@
                 <h3>All Products</h3>
                 <p>Complete range of medicines</p>
             </div>
-            
+
+
+   
+
+
             <div class="category-card" data-category="vaccines">
                 <i class="fas fa-syringe category-icon"></i>
                 <h3>Vaccines</h3>
                 <p>Immunization products</p>
             </div>
             
+
+
+
+
             <div class="category-card" data-category="antibiotics">
                 <i class="fas fa-bacteria category-icon"></i>
                 <h3>Antibiotics</h3>
@@ -781,6 +789,16 @@
     <h3>Urology</h3>
     <p>Urinary system treatments</p>
 </div>
+
+        <div class="category-card" data-category="urology">
+  
+<i class="fas fa-hand-holding-heart category-icon"></i>
+
+
+    <h3>Many More</h3>
+    <p>Scroll down to explore all categories</p>
+</div>
+
         </div>
     </div>
 </section>
@@ -881,6 +899,73 @@
           <a href="contact.html" class="btn">Request Information</a>
         </div>
       </div>
+
+
+
+
+
+<div class="product-card" data-category="vaccines">
+  <div class="product-img icon-bg">
+    <i class="fas fa-syringe"></i>
+    <div class="product-category">Vaccines</div>
+  </div>
+
+  <div class="product-content">
+    <h3>Human Albumin Injection</h3>
+
+    <p class="product-description">
+      Human albumin solution used in hospitals for treatment of
+      hypoalbuminemia, burns and trauma conditions.
+    </p>
+
+    <div class="product-specs">
+      <span class="spec">IV Infusion</span>
+      <span class="spec">5% / 20%</span>
+      <span class="spec">Hospital Use</span>
+    </div>
+
+    <a href="contact.html" class="btn">Request Information</a>
+  </div>
+</div>
+
+
+<div class="product-card" data-category="vaccines">
+  <div class="product-img icon-bg">
+    <i class="fas fa-vial"></i>
+    <div class="product-category">Vaccines</div>
+  </div>
+
+  <div class="product-content">
+    <h3>IVIG Injection (Intravenous Immunoglobulin)</h3>
+
+    <p class="product-description">
+      Intravenous immunoglobulin therapy used for immune deficiency
+      and autoimmune disease treatment.
+    </p>
+
+    <div class="product-specs">
+      <span class="spec">IV Infusion</span>
+      <span class="spec">Cold Chain</span>
+      <span class="spec">Hospital Use</span>
+    </div>
+
+    <a href="contact.html" class="btn">Request Information</a>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
       <!-- ===================== ANTIBIOTICS (8) ===================== -->
@@ -1497,8 +1582,6 @@
     
 
 
-
-
 <script>
   // Mobile Navigation Toggle
   const mobileToggle = document.querySelector('.mobile-toggle');
@@ -1507,36 +1590,54 @@
   if (mobileToggle && navLinks) {
     mobileToggle.addEventListener('click', () => {
       navLinks.classList.toggle('active');
-      mobileToggle.querySelector('i').classList.toggle('fa-bars');
-      mobileToggle.querySelector('i').classList.toggle('fa-times');
+      const icon = mobileToggle.querySelector('i');
+      if (icon) {
+        icon.classList.toggle('fa-bars');
+        icon.classList.toggle('fa-times');
+      }
     });
 
+    // Close mobile menu when clicking on a link
     document.querySelectorAll('.nav-links a').forEach(link => {
       link.addEventListener('click', () => {
         navLinks.classList.remove('active');
-        mobileToggle.querySelector('i').classList.add('fa-bars');
-        mobileToggle.querySelector('i').classList.remove('fa-times');
+        const icon = mobileToggle.querySelector('i');
+        if (icon) {
+          icon.classList.add('fa-bars');
+          icon.classList.remove('fa-times');
+        }
       });
     });
   }
 
+  // -------------------------------
   // Product Category Filtering
+  // -------------------------------
   const categoryCards = document.querySelectorAll('.category-card');
 
   function getProductCards() {
     return document.querySelectorAll('.product-card');
   }
 
+  // Normalize category text (fixes vaccines not working)
+  function norm(value) {
+    return String(value || '').trim().toLowerCase();
+  }
+
   categoryCards.forEach(card => {
     card.addEventListener('click', () => {
+      // Update active category
       categoryCards.forEach(c => c.classList.remove('active'));
       card.classList.add('active');
 
-      const selectedCategory = card.getAttribute('data-category');
+      const selectedCategory = norm(card.getAttribute('data-category'));
       const productCards = getProductCards();
 
+      // Filter products
       productCards.forEach(product => {
-        const match = (selectedCategory === 'all' || product.getAttribute('data-category') === selectedCategory);
+        const productCategory = norm(product.getAttribute('data-category'));
+
+        const match = (selectedCategory === 'all' || productCategory === selectedCategory);
 
         if (match) {
           product.style.display = 'block';
@@ -1555,7 +1656,9 @@
     });
   });
 
+  // -------------------------------
   // Product Cards Animation on Scroll
+  // -------------------------------
   const observerOptions = { threshold: 0.2, rootMargin: '0px 0px -50px 0px' };
 
   const observer = new IntersectionObserver((entries) => {
@@ -1575,7 +1678,9 @@
     observer.observe(card);
   });
 
+  // -------------------------------
   // Category Cards Animation
+  // -------------------------------
   categoryCards.forEach((card, index) => {
     card.style.opacity = '0';
     card.style.transform = 'translateY(20px)';
@@ -1587,6 +1692,8 @@
     }, 300 + (index * 100));
   });
 </script>
+
+
 
 
 
